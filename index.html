@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Finanzas del Emprendedor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #0e0e0e;
+      color: #ffffff;
+      line-height: 1.6;
+    }
+
+    section {
+      padding: 80px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    h1, h2, h3 {
+      margin-bottom: 20px;
+      color: #f5c77a;
+    }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+      url("https://images.unsplash.com/photo-1554224155-6726b3ff858f") center/cover no-repeat;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    /* TERMÓMETRO */
+    .thermometer {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    .thermo-box {
+      background: #1c1c1c;
+      padding: 30px;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    /* MAPA 5 ETAPAS */
+    .stages {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .stage {
+      background: #1a1a1a;
+      padding: 25px;
+      border-left: 4px solid #f5c77a;
+      border-radius: 8px;
+    }
+
+    /* SIMULADOR */
+    .simulator {
+      background: #1c1c1c;
+      padding: 40px;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    input {
+      padding: 10px;
+      width: 200px;
+      margin: 10px;
+      border-radius: 6px;
+      border: none;
+    }
+
+    button {
+      padding: 12px 25px;
+      background: #f5c77a;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    /* RESEÑAS */
+    .reviews {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .review {
+      background: #1a1a1a;
+      padding: 25px;
+      border-radius: 10px;
+      font-style: italic;
+    }
+
+    /* CONTACTO */
+    form {
+      max-width: 500px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+    }
+
+    form input, form textarea {
+      margin-bottom: 15px;
+      padding: 12px;
+      border-radius: 6px;
+      border: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px;
+      background: #000;
+      color: #777;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div>
+    <h1>La Finanzas del Emprendedor Consciente</h1>
+    <p>Decisiones claras, foco financiero y calma mental para construir un negocio sostenible y abundante.</p>
+  </div>
+</section>
+
+<!-- TERMÓMETRO -->
+<section>
+  <h2>Termómetro de Decisión Financiera</h2>
+  <div class="thermometer">
+    <div class="thermo-box">
+      <h3>Decisión</h3>
+      <p>Actuar con datos, no con impulsos.</p>
+    </div>
+    <div class="thermo-box">
+      <h3>Foco</h3>
+      <p>Invertir energía solo en lo que escala.</p>
+    </div>
+    <div class="thermo-box">
+      <h3>Asignación</h3>
+      <p>Distribuir recursos con intención.</p>
+    </div>
+    <div class="thermo-box">
+      <h3>Calma</h3>
+      <p>Tomar decisiones sin ansiedad.</p>
+    </div>
+    <div class="thermo-box">
+      <h3>Horizonte</h3>
+      <p>Pensar a largo plazo, ejecutar hoy.</p>
+    </div>
+  </div>
+</section>
+
+<!-- MAPA 5 ETAPAS -->
+<section>
+  <h2>Mapa de las 5 Etapas del Emprendedor Financiero</h2>
+  <div class="stages">
+    <div class="stage">1. Caos financiero inicial</div>
+    <div class="stage">2. Control y orden del flujo</div>
+    <div class="stage">3. Optimización consciente</div>
+    <div class="stage">4. Expansión estratégica</div>
+    <div class="stage">5. Libertad y calma financiera</div>
+  </div>
+</section>
+
+<!-- SIMULADOR -->
+<section>
+  <h2>Toolkit – Simulador de Aporte</h2>
+  <div class="simulator">
+    <p>Ingresa tu aporte mensual y visualiza tu constancia.</p>
+    <input type="number" id="aporte" placeholder="Aporte mensual">
+    <button onclick="simular()">Simular</button>
+    <p id="resultado"></p>
+  </div>
+</section>
+
+<!-- RESEÑAS -->
+<section>
+  <h2>Lo que dicen nuestros clientes</h2>
+  <div class="reviews">
+    <div class="review">“Aprendí a tomar decisiones financieras sin miedo.” – Laura</div>
+    <div class="review">“Hoy tengo claridad y control total de mi dinero.” – Andrés</div>
+    <div class="review">“Este enfoque cambió mi negocio y mi mente.” – Sofía</div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section>
+  <h2>Contacto</h2>
+  <form>
+    <input type="text" placeholder="Nombre">
+    <input type="email" placeholder="Email">
+    <textarea rows="4" placeholder="Mensaje"></textarea>
+    <button type="submit">Enviar</button>
+  </form>
+</section>
+
+<footer>
+  © 2026 Finanzas del Emprendedor
+</footer>
+
+<script>
+  function simular() {
+    const aporte = document.getElementById("aporte").value;
+    if (aporte > 0) {
+      const anual = aporte * 12;
+      document.getElementById("resultado").innerText =
+        "Tu aporte anual sería de $" + anual;
+    }
+  }
+</script>
+
+</body>
+</html>
